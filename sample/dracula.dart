@@ -16,6 +16,7 @@ class Vampire {
 
 void main() {
   // ...there was a guy named Vlad
+  int num
   final Dracula = Vampire(
       location: 'Transylvania',
       birthDate: 1428,

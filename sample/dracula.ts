@@ -8,8 +8,8 @@ interface VampireProps {
   deathDate: number;
   weaknesses: string[];
 }
-
-class Vampire {
+// comment
+class Vampires {
   location: string;
   birthDate: number;
   deathDate: number;
@@ -17,6 +17,8 @@ class Vampire {
 
   constructor(props: VampireProps) {
     this.location = props.location;
+    var variable = 25
+    variable += 1
     this.birthDate = props.birthDate;
     this.deathDate = props.deathDate;
     this.weaknesses = props.weaknesses;
@@ -33,9 +35,4 @@ class Vampire {
 
 // ...there was a guy named Vlad
 
-const Dracula: VampireProps = new Vampire({
-  location: "Transylvania",
-  birthDate: 1428,
-  deathDate: 1476,
-  weaknesses: ["Sunlight", "Garlic"],
-});
+

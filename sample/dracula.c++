@@ -1,38 +1,101 @@
-#include <string>
+#include <iostream>
 #include <vector>
+#include <map>
+#include <algorithm>
 
-/*
- * Once upon a time...
- */
+#define PI 3.14159
 
-class Vampire {
- public:
-  Vampire(std::string location, int birth_date, int death_date,
-          std::vector<std::string> weaknesses)
-      : _location{location},
-        _birth_date{birth_date},
-        _death_date{death_date},
-        _weaknesses{weaknesses} {}
+// This is a single line comment
 
-  int age() { return calc_age(); }
+/* This is a
+   multi-line comment */
 
- private:
-  std::string _location;
-  int _birth_date;
-  int _death_date;
-  std::vector<std::string> _weaknesses;
+// Global variable
+int globalVar = 10;
 
-  int calc_age() { return _death_date - _birth_date; }
+// Enum
+enum Days {Mon, Tue, Wed, Thu, Fri, Sat, Sun};
+
+// Struct
+struct Point {
+    int x;
+    int y;
 };
 
-// ...there was a guy named Vlad
+// Class
+class Circle {
+public:
+    Circle(double r) : radius(r) {}
+
+    double area() {
+        return PI * radius * radius;
+    }
+
+private:
+    double radius;
+};
+
+// Function
+int add(int a, int b) {
+    return a + b;
+}
+
+// Template function
+template <typename T>
+T max(T a, T b) {
+    return (a > b) ? a : b;
+}
 
 int main() {
-  std::string location = "Transylvania";
-  int birth_date = 1428, death_date = 1476;
-  std::vector<std::string> weaknesses { "Sunlight", "Garlic" };
+    // Variable declaration
+    int a = 5, b = 10;
 
-  Vampire dracula{location, birth_date, death_date, weaknesses};
+    // If-else statement
+    if (a > b) {
+        std::cout << "a is greater than b" << std::endl;
+    } else {
+        std::cout << "b is greater than a" << std::endl;
+    }
 
-  return 0;
+    // For loop
+    for (int i = 0; i < 10; i++) {
+        std::cout << i << std::endl;
+    }
+
+    // While loop
+    while (a < b) {
+        a++;
+    }
+
+    // Do-while loop
+    do {
+        b--;
+    } while (b > 0);
+
+    // Switch case
+    switch (a) {
+        case 1:
+            std::cout << "One" << std::endl;
+            break;
+        case 2:
+            std::cout << "Two" << std::endl;
+            break;
+        default:
+            std::cout << "Default" << std::endl;
+    }
+
+    // Vector
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    // Map
+    std::map<std::string, int> map = {{"one", 1}, {"two", 2}, {"three", 3}};
+
+    // Lambda function
+    auto lambda = [](int x) { return x * x; };
+    int num = 50;
+
+    // Using an algorithm
+    std::sort(vec.begin(), vec.end());
+
+    return 0;
 }

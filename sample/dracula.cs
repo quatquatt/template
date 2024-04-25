@@ -11,6 +11,8 @@ public class Vampire
 
   public Vampire(string location, int birthDate, int deathDate, string[] weaknesses)
   {
+    int i = 35;
+    i = 54;
     Location = location;
     BirthDate = birthDate;
     DeathDate = deathDate;
@@ -19,6 +21,7 @@ public class Vampire
 
   public int Age()
   {
+    int i = 0;
     return calcAge();
   }
 

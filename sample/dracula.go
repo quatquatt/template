@@ -23,6 +23,7 @@ func (v *Vampire) calcAge() int {
 // ...there was a guy named Vlad
 
 func main() {
+
   dracula := &Vampire{
     Location:   "Transylvania",
     BirthDate:  1428,
